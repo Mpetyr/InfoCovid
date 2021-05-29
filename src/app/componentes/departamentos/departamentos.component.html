@@ -1,0 +1,177 @@
+<div class="container-fluid inicio">
+<div class="container text-center">
+    <h1 class="titulo">SITUACIÓN POR DEPARTAMENTOS<br>Y DISTRITOS</h1>
+</div>
+
+<br/>
+
+<div>
+    <div class="dropdown">
+        <button type="button" class="btn btn dropdown-toggle" id="selector_depto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <strong>SELECCIONE UN DEPARTAMENTO</strong>
+        </button>
+        <div class="dropdown-menu" role="menu" aria-labelledby="selector_depto">
+            <a class="dropdown-item" id="amazonas" (click)="depa ('Amazonas')">Amazonas</a>
+            <a class="dropdown-item" id="antioquia" (click)="depa ('Antioquia')">Antioquia</a>
+            <a class="dropdown-item" id="arauca" (click)="depa ('Arauca')">Arauca</a>
+            <a class="dropdown-item" id="san_andres" (click)="depa ('Archipiélago de San Andrés Providencia y Santa Catalina')">Archipiélago de San Andrés Providencia y Santa Catalina</a>
+            <a class="dropdown-item" id="atlantico" (click)="depa ('Atlántico')">Atlántico</a>
+            <a class="dropdown-item" id="barranquilla" (click)="depa ('Barranquilla D.E.')">Barranquilla D.E.</a>
+            <a class="dropdown-item" id="bogota" (click)="depa ('Bogotá D.C.')">Bogotá D.C.</a>
+            <a class="dropdown-item" id="bolivar" (click)="depa ('Bolívar')">Bolívar</a>
+            <a class="dropdown-item" id="boyaca" (click)="depa ('Boyacá')">Boyacá</a>
+            <a class="dropdown-item" id="buenaventura" (click)="depa ('Buenaventura D.E.')">Buenaventura D.E.</a>
+            <a class="dropdown-item" id="caldas" (click)="depa ('Caldas')">Caldas</a>
+            <a class="dropdown-item" id="caqueta" (click)="depa ('Caquetá')">Caquetá</a>
+            <a class="dropdown-item" id="artagena D.E. y C." (click)="depa ('Cartagena D.T. y C.')">Cartagena D.T. y C.</a>
+            <a class="dropdown-item" id="casanare" (click)="depa ('Casanare')">Casanare</a>
+            <a class="dropdown-item" id="cauca" (click)="depa ('Cauca')">Cauca</a>
+            <a class="dropdown-item" id="cesar" (click)="depa ('Cesar')">Cesar</a>
+            <a class="dropdown-item" id="choco" (click)="depa ('Chocó')">Chocó</a>
+            <a class="dropdown-item" id="cordoba" (click)="depa ('Córdoba')">Córdoba</a>
+            <a class="dropdown-item" id="cundinamarca" (click)="depa ('Cundinamarca')">Cundinamarca</a>
+            <a class="dropdown-item" id="guainia" (click)="depa ('Guainía')">Guainía</a>
+            <a class="dropdown-item" id="guaviare" (click)="depa ('Guaviare')">Guaviare</a>
+            <a class="dropdown-item" id="huila" (click)="depa ('Huila')">Huila</a>
+            <a class="dropdown-item" id="guajira" (click)="depa ('La Guajira')">Guajira</a>
+            <a class="dropdown-item" id="magdalena" (click)="depa ('Magdalena')">Magdalena</a>
+            <a class="dropdown-item" id="meta" (click)="depa ('Meta')">Meta</a>
+            <a class="dropdown-item" id="narino" (click)="depa ('Nariño')">Nariño</a>
+            <a class="dropdown-item" id="n_santander" (click)="depa ('Norte de Santander')">Norte de Santander</a>
+            <a class="dropdown-item" id="putumayo" (click)="depa ('Putumayo')">Putumayo</a>
+            <a class="dropdown-item" id="quindio" (click)="depa ('Quindío')">Quindío</a>
+            <a class="dropdown-item" id="risaralda" (click)="depa ('Risaralda')">Risaralda</a>
+            <a class="dropdown-item" id="santa_marta" (click)="depa ('Santa Marta D.T. y C.')">Santa Marta D.T. y C.</a>
+            <a class="dropdown-item" id="santander" (click)="depa ('Santander')">Santander</a>
+            <a class="dropdown-item" id="sucre" (click)="depa ('Sucre')">Sucre</a>
+            <a class="dropdown-item" id="tolima" (click)="depa ('Tolima')">Tolima</a>
+            <a class="dropdown-item" id="valle" (click)="depa ('Valle del Cauca')">Valle del Cauca</a>
+            <a class="dropdown-item" id="vaupes" (click)="depa ('Vaupés')">Vaupés</a>
+            <a class="dropdown-item" id="vichada" (click)="depa ('Vichada')">Vichada</a>
+        </div>
+    </div>
+</div>
+
+<br/>
+
+<div class="container-fluid">
+    <div class="card datos float-left">
+        <h4>Casos activos
+            <br/>
+            {{ contConfirmados }}    
+        </h4>
+
+    </div>
+
+    <div class="card datos float-left">
+        <h4>Casos recuperados
+            <br/>
+            {{ contRecuperados }}    
+        </h4>
+
+    </div>
+
+    <div class="card datos float-left">
+        <h4>Casos fallecidos
+            <br/>
+            {{ contFallecidos }}    
+        </h4>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="card datos float-left">
+            <h4>Letalidad Covid-19
+                <br/>
+                {{ contLetalidad }} %    
+            </h4>
+    
+        </div>
+
+
+
+
+
+<div class="card grafico float-left">
+
+    <div class="card-header">
+        <h4>Sexo de pacientes</h4>
+    </div>
+
+    <div class="card-body">
+        <canvas id='sexo' >
+            {{ chartSexo }}
+        </canvas>
+    </div>
+</div>
+
+
+<div class="card grafico float-right">
+
+    <div class="card-header">
+        <h4>Tipo de recuperación de pacientes</h4>
+    </div>
+
+    <div class="card-body">
+        <canvas id='recuperacion' >
+            {{ chartRecuperacion }}
+        </canvas>
+    </div>
+</div>
+
+
+<div class="card grafico float-right">
+
+    <div class="card-header">
+        <h4>Casos notificados por Covid-19, según etnia</h4>
+    </div>
+
+    <div class="card-body">
+        <canvas id='etnia' >
+            {{ chartEtnia }}
+        </canvas>
+    </div>
+</div>
+
+<div class="card grafico float-left">
+
+    <div class="card-header">
+        <h4>Total y tipos de infectados por mes</h4>
+    </div>
+
+    <div class="card-body">
+        <canvas id='contagiados_mes' >
+            {{ chartInfectadosMeses }}
+        </canvas>
+    </div>
+</div>
+
+<div class="card grafico float-left">
+
+    <div class="card-header">
+        <h4>Casos notificados por grupo etario</h4>
+    </div>
+
+    <div class="card-body">
+        <canvas id='edades' height="=100%" >
+            {{ charGrupoEtario }}
+        </canvas>
+    </div>
+</div>
+
+<div class="card grafico float-right">
+
+    <div class="card-header">
+        <h4>Estado de notificados por grupo etario</h4>
+    </div>
+
+    <div class="card-body">
+        <canvas id='EstadoEdades' height="150%" >
+            {{ chartEstadoGrupoEtario }}
+        </canvas>
+    </div>
+</div>
+
+</div>
+
+</div>

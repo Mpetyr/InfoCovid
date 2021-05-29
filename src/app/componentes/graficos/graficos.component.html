@@ -1,0 +1,144 @@
+
+<div class="container-fluid">
+    <div class="container text-center">
+        <h1 class="titulo">Datos Epidemiológicos Generales</h1>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+
+        <div class="card datos float-left">
+            <h4>Casos activos
+                <br/>
+                {{ contConfirmados }}    
+            </h4>
+
+        </div>
+
+        <div class="card datos float-left">
+            <h4>Casos recuperados
+                <br/>
+                {{ contRecuperados }}    
+            </h4>
+
+        </div>
+
+        <div class="card datos float-left">
+            <h4>Casos fallecidos
+                <br/>
+                {{ contFallecidos }}    
+            </h4>
+
+        </div>
+
+
+        <div class="card grafico2 float-right">
+
+            <div class="card-header">
+                <h4>Curva lineal y barras</h4>
+            </div>
+    
+            <div class="card-body">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                      <input type="radio" name="options" id="option1" (click)="depa ('line')" active> Lineal
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options" id="option2" (click)="depa ('bar')"> Barras
+                    </label>
+                  </div>
+                <canvas id='CurvaLinea' height="75%" >
+                    {{ chartCurvaInfectados }}
+                </canvas>
+            </div>
+    
+        </div>
+    
+    
+
+    <div class="card grafico float-left">
+
+        <div class="card-header">
+            <h4>Sexo de pacientes</h4>
+        </div>
+
+        <div class="card-body">
+            <canvas id='sexo' >
+                {{ chartSexo }}
+            </canvas>
+        </div>
+    </div>
+
+
+    <div class="card grafico float-right">
+
+        <div class="card-header">
+            <h4>Tipo de recuperación de pacientes</h4>
+        </div>
+
+        <div class="card-body">
+            <canvas id='recuperacion' >
+                {{ chartRecuperacion }}
+            </canvas>
+        </div>
+    </div>
+
+
+    <div class="card grafico float-right">
+
+        <div class="card-header">
+            <h4>Casos notificados por Covid-19, según etnia</h4>
+        </div>
+
+        <div class="card-body">
+            <canvas id='etnia' >
+                {{ chartEtnia }}
+            </canvas>
+        </div>
+    </div>
+
+    <div class="card grafico float-left">
+
+        <div class="card-header">
+            <h4>Total y tipos de infectados por mes</h4>
+        </div>
+
+        <div class="card-body">
+            <canvas id='contagiados_mes' >
+                {{ chartInfectadosMeses }}
+            </canvas>
+        </div>
+    </div>
+
+    <div class="card grafico float-left">
+
+        <div class="card-header">
+            <h4>Casos notificados por grupo etario</h4>
+        </div>
+
+        <div class="card-body">
+            <canvas id='edades' height="=100%" >
+                {{ charGrupoEtario }}
+            </canvas>
+        </div>
+    </div>
+
+    <div class="card grafico float-right">
+
+        <div class="card-header">
+            <h4>Estado de notificados por grupo etario</h4>
+        </div>
+
+        <div class="card-body">
+            <canvas id='EstadoEdades' height="150%" >
+                {{ chartEstadoGrupoEtario }}
+            </canvas>
+        </div>
+    </div>
+
+    
+    </div>
+
+
+</div>

@@ -1,0 +1,31 @@
+.inicio{
+    color: white;
+    background-color: #081229;
+
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+h1{
+    font-weight: 650;
+    font-size: 70px;
+    text-align: center;
+}
+.primero{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: larger;
+}
+
+.titulo_uno{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: xx-large;
+    text-align: center;
+}
+.titulo_dos{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: xx-large;
+    text-align: center;
+}

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" routerLinkActive="active" [routerLink]="['inicio']">InfoCovid-19</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['inicio']">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['informacion-general']">Información general</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['noti-covid19']">NotiCovid-19</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Datos epidemiológicos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['datos-epidemiologicos']">General</a>
+            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['departamentos']">Departamentos y Distritos</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['bibliografias']">Bibliografías de interés</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>

@@ -1,0 +1,40 @@
+.card {
+    border: 3px solid black;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.grafico2 {
+    width: 100%;
+    height: 40%;
+    margin: 1%;
+    
+}
+
+.grafico {
+    width: 47%;
+    height: 70%;
+    margin: 1%;
+    
+}
+
+.Estado{
+    width: 50%;
+    height: 50%;
+    margin: 2%;
+}
+
+.curva{
+    width: 40%;
+    margin: 2%;
+    float: center;
+}
+.titulo{
+    font-weight: 650;
+    font-size: 70px;
+}
+
+.datos{
+    width: 20%;
+    height:13%;
+    margin: 1%;
+}
